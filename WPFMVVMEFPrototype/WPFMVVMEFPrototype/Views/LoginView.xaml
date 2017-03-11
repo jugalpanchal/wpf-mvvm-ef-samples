@@ -3,7 +3,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="LoginView" Height="300" Width="300"
         ResizeMode="CanMinimize"
-        FocusManager.FocusedElement="{Binding ElementName=tbUserId}">   
+        FocusManager.FocusedElement="{Binding ElementName=tbUserId}">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="25*"/>

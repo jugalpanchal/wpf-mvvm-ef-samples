@@ -70,6 +70,16 @@ namespace WPFMVVMEFPrototype.Resources.Localization {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
+        /// </summary>
+        internal static System.Drawing.Icon LoginIcon {
+            get {
+                object obj = ResourceManager.GetObject("LoginIcon", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Password.
         /// </summary>
         internal static string Password {
