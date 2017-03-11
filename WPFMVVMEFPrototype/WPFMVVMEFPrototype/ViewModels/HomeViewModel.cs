@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using WPFMVVMEFPrototype.Commands;
+using WPFMVVMEFPrototype.DataModel;
 using WPFMVVMEFPrototype.Models;
 using WPFMVVMEFPrototype.ServiceLocator;
 
@@ -14,7 +15,7 @@ namespace WPFMVVMEFPrototype.ViewModels
     {
         #region Properties
 
-        public ObservableCollection<Company> Companies { get; set; }
+        public ObservableCollection<CompanyModel> Companies { get; set; }
 
         #endregion
 
@@ -42,12 +43,23 @@ namespace WPFMVVMEFPrototype.ViewModels
 
             this.DataInitialization();
         }
+        
+        #endregion
+
+        #region Private Method
 
         private void DataInitialization()
         {
-            this.Companies = new ObservableCollection<Company>();
-            this.Companies.Add(new Company("Honda"));
-            this.Companies.Add(new Company("Toyota"));
+            this.Companies = new ObservableCollection<CompanyModel>();
+
+            using(var context = new MotorDBEntities())
+            {
+                foreach(var company in context.Companies)
+                {
+                    var companyModel = new CompanyModel(company.Name);
+                    this.Companies.Add(companyModel);
+                }
+            }
         }
 
         #endregion
