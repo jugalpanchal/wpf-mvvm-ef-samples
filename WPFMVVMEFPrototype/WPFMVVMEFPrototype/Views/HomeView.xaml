@@ -6,9 +6,9 @@
         <DockPanel>
             <Menu DockPanel.Dock="Top">
                 <MenuItem Header="File">
-                    <MenuItem Header="New" />
-                    <MenuItem Header="Open" />
-                    <MenuItem Header="Save" />
+                    <MenuItem Header="Companies" />
+                    <MenuItem Header="Search Model" />
+                    <MenuItem Header="Search Car" />
                     <Separator />
                     <MenuItem Header="Exit" />
                 </MenuItem>
@@ -17,6 +17,20 @@
                     <MenuItem Header="About" />
                 </MenuItem>
             </Menu>
+            <DataGrid ItemsSource="{Binding Companies}">
+                <DataGrid.Columns>
+                    <DataGridTemplateColumn>
+                        <DataGridTemplateColumn.Header>
+                            <Label>Name</Label>
+                        </DataGridTemplateColumn.Header>
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <TextBlock Text="{Binding Name}"/>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+                </DataGrid.Columns>
+            </DataGrid>
         </DockPanel>
     </Grid>
 </Window>

@@ -1,15 +1,23 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using WPFMVVMEFPrototype.Commands;
+using WPFMVVMEFPrototype.Models;
 using WPFMVVMEFPrototype.ServiceLocator;
 
 namespace WPFMVVMEFPrototype.ViewModels
 {
     class HomeViewModel : ViewModel
-    {        
+    {
+        #region Properties
+
+        public ObservableCollection<Company> Companies { get; set; }
+
+        #endregion
+
         #region Command Properties
 
         public IRelayCommand NewCommand { get; set; }
@@ -30,6 +38,15 @@ namespace WPFMVVMEFPrototype.ViewModels
             this.ExitCommand = new RelayCommand(Exit, p => this.CanExit());
             this.SettingCommand = new RelayCommand(Setting, p => this.CanSetting());
             this.HelpCommand = new RelayCommand(Help, p => this.CanHelp());
+
+            this.DataInitialization();
+        }
+
+        private void DataInitialization()
+        {
+            this.Companies = new ObservableCollection<Company>();
+            this.Companies.Add(new Company("Honda"));
+            this.Companies.Add(new Company("Toyota"));
         }
 
         #endregion
