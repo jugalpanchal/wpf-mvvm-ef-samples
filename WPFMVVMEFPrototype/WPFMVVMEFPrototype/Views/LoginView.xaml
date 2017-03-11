@@ -1,9 +1,13 @@
 ﻿<Window x:Class="WPFMVVMEFPrototype.Views.LoginView"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:resource="clr-namespace:WPFMVVMEFPrototype.Resources.Localization"
         Title="LoginView" Height="300" Width="300"
         ResizeMode="CanMinimize"
         FocusManager.FocusedElement="{Binding ElementName=tbUserId}">
+    <Window.Resources>
+        <Image x:Key="loginIcon1" Source="{x:Static resource:Resource.LoginIcon}"/>
+    </Window.Resources>
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="25*"/>
@@ -25,6 +29,7 @@
         <PasswordBox Grid.Row="2" Grid.Column="2" Height="23" Width="120" 
                      Name="tbPassword" PasswordChar="#"/>
         <Button Grid.Row="3" Grid.Column="2" Content="Login" Height="30" Width="75"
-                Command="{Binding LoginCommand}" CommandParameter="{Binding ElementName=tbPassword}"/>
+                Command="{Binding LoginCommand}" CommandParameter="{Binding ElementName=tbPassword}"
+                IsDefault="{Binding ElementName=tbPassword, Path=IsKeyboardFocused}"/>
     </Grid>
 </Window>
