@@ -29,7 +29,7 @@
         <PasswordBox Grid.Row="2" Grid.Column="2" Height="23" Width="120" 
                      Name="tbPassword" PasswordChar="#"/>
         <Button Grid.Row="3" Grid.Column="2" Content="Login" Height="30" Width="75"
-                Command="{Binding LoginCommand}" CommandParameter="{Binding ElementName=tbPassword}"
+                Command="{Binding LoginCommand}" CommandParameter="{Binding ElementName=tbPassword, Path=SecurePassword}"
                 IsDefault="{Binding ElementName=tbPassword, Path=IsKeyboardFocused}"/>
     </Grid>
 </Window>

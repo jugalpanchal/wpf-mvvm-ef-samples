@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security;
 using System.Text;
 using System.Threading.Tasks;
 using WPFMVVMEFPrototype.Commands;
@@ -13,8 +14,6 @@ namespace WPFMVVMEFPrototype.ViewModels
         #region Properties
 
         public string UserId { get; set; }
-
-        public string Password { get; set; }
 
         #endregion
 
@@ -38,6 +37,7 @@ namespace WPFMVVMEFPrototype.ViewModels
 
         private void Authentication(object password)
         {
+            SecureString SecurePassword = password as SecureString;
             this.NavigationService.Home(new HomeViewModel(this.NavigationService));
         }
 

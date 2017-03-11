@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
 using System.Linq;
+using System.Security;
 using System.Threading.Tasks;
 using System.Windows;
 using WPFMVVMEFPrototype.ServiceLocator;
@@ -16,16 +17,29 @@ namespace WPFMVVMEFPrototype
     /// </summary>
     public partial class App : Application
     {
+        #region Privte Fields
+        
+        private readonly WindowState windowState = WindowState.Normal;
+        private readonly WindowStartupLocation windowStartupLocation = WindowStartupLocation.CenterScreen;
+
+        #endregion
+
         #region Overide Methods
 
         protected override void OnStartup(StartupEventArgs e)
         {
             base.OnStartup(e);
 
-            var navigationService = new NavigationService();
+            var loginView = new LoginView()
+            {
+                WindowState = windowState,
+                WindowStartupLocation = windowStartupLocation
+            };
 
-            var loginView = new LoginView();
-            loginView.DataContext = new LoginViewModel(navigationService);
+            var navigationService = new NavigationService(windowState, windowStartupLocation, loginView);
+
+            var loginViewModel = new LoginViewModel(navigationService);
+            loginView.DataContext = loginViewModel;
             loginView.Show();
         }
 
