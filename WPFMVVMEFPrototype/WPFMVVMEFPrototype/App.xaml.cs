@@ -5,6 +5,7 @@ using System.Data;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
+using WPFMVVMEFPrototype.ServiceLocator;
 using WPFMVVMEFPrototype.ViewModels;
 using WPFMVVMEFPrototype.Views;
 
@@ -18,8 +19,11 @@ namespace WPFMVVMEFPrototype
         protected override void OnStartup(StartupEventArgs e)
         {
             base.OnStartup(e);
+
+            var navigationService = new NavigationService();
+
             var loginView = new LoginView();
-            loginView.DataContext = new LoginViewModel();
+            loginView.DataContext = new LoginViewModel(navigationService);
             loginView.Show();
         }
     }
