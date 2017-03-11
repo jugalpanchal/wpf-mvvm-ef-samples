@@ -100,10 +100,10 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>MotorModel.edmx</DependentUpon>
     </Compile>
-    <Compile Include="Models\Car.cs" />
-    <Compile Include="Models\Company.cs" />
+    <Compile Include="Models\CarModel.cs" />
+    <Compile Include="Models\CompanyModel.cs" />
     <Compile Include="Models\Model.cs" />
-    <Compile Include="Models\Variant.cs" />
+    <Compile Include="Models\VariantModel.cs" />
     <Compile Include="Resources\Localization\Resource.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

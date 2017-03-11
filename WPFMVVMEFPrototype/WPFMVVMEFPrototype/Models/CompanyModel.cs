@@ -7,20 +7,20 @@ using System.Threading.Tasks;
 
 namespace WPFMVVMEFPrototype.Models
 {
-    class Company : Model
+    class CompanyModel : Model
     {
         #region Properties
 
         public string Name { get; set; }
-        public ObservableCollection<Variant> Variants { get; set; }
+        public ObservableCollection<VariantModel> Variants { get; set; }
 
         #endregion
 
         #region Constructor
 
-        public Company(string name)
+        public CompanyModel(string name)
         {
-            this.Variants = new ObservableCollection<Variant>();
+            this.Variants = new ObservableCollection<VariantModel>();
             this.Name = name;
         }
 
@@ -28,7 +28,7 @@ namespace WPFMVVMEFPrototype.Models
 
         #region Private Methods
 
-        private void AddVariant(Variant variant)
+        private void AddVariant(VariantModel variant)
         {
             this.Variants.Add(variant);
         }
