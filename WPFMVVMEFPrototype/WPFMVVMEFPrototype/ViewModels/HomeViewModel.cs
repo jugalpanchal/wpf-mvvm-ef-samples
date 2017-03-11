@@ -27,6 +27,7 @@ namespace WPFMVVMEFPrototype.ViewModels
         public IRelayCommand SettingCommand { get; set; }
         public IRelayCommand HelpCommand { get; set; }
         #endregion
+
         #region Constructor
 
         public HomeViewModel(INavigationService navigationService)
