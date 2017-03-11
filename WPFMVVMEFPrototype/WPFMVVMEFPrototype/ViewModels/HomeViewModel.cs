@@ -14,6 +14,7 @@ namespace WPFMVVMEFPrototype.ViewModels
         public HomeViewModel(INavigationService navigationService)
             : base(navigationService)
         {
+            
         }
 
         #endregion
