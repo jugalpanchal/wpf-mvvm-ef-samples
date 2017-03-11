@@ -40,7 +40,22 @@ namespace WPFMVVMEFPrototype
 
             var loginViewModel = new LoginViewModel(navigationService);
             loginView.DataContext = loginViewModel;
+
+#if DEBUG
+            loginViewModel.UserId = "Jugal";
+            
+            //Hardcoded password for debug mode.
+            SecureString secureString = new SecureString();
+            secureString.AppendChar('j');
+            secureString.AppendChar('u');
+            secureString.AppendChar('g');
+            secureString.AppendChar('a');
+            secureString.AppendChar('l');
+
+            loginViewModel.LoginCommand.Execute(secureString);
+#else
             loginView.Show();
+#endif
         }
 
         #endregion
