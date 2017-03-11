@@ -3,6 +3,26 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="LoginView" Height="300" Width="300">
     <Grid>
-        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="25*"/>
+            <ColumnDefinition Width="100*"/>
+            <ColumnDefinition Width="100*"/>
+            <ColumnDefinition Width="25*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100*"/>
+            <RowDefinition Height="30*"/>
+            <RowDefinition Height="30*"/>
+            <RowDefinition Height="30*"/>
+            <RowDefinition Height="100*"/>
+        </Grid.RowDefinitions>
+        <Label Grid.Row="1" Grid.Column="1" Content="User Id" />
+        <Label Grid.Row="2" Grid.Column="1" Content="Password" />
+        <TextBox Grid.Row="1" Grid.Column="2" Height="23" Width="120" 
+                 Text="{Binding UserId}"/>
+        <TextBox Grid.Row="2" Grid.Column="2" Height="23" Width="120" 
+                 Text="{Binding Password}"/>
+        <Button Grid.Row="3" Grid.Column="2" Content="Login" Height="30" Width="75"
+                Command="{Binding LoginCommand}"/>
     </Grid>
 </Window>

@@ -17,7 +17,7 @@ namespace WPFMVVMEFPrototype.ViewModels
 
         #endregion
 
-        #region Public Fields
+        #region Public Event
         
         public event PropertyChangedEventHandler PropertyChanged;
 
