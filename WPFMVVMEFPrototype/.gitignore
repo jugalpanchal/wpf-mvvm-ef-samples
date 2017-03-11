@@ -1,0 +1,6 @@
+*.suo
+*.exe
+/packages/
+/WPFMVVMEFPrototype/obj/
+/WPFMVVMEFPrototype/bin/
+/WPFMVVMEFPrototype/WPFMVVMEFPrototype.csproj.user
