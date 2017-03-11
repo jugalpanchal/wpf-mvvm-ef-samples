@@ -29,14 +29,14 @@ namespace WPFMVVMEFPrototype.ViewModels
         public LoginViewModel(NavigationService navigationService)
             : base(navigationService)
         {
-            this.LoginCommand = new RelayCommand(p => authentication(), p =>true);
+            this.LoginCommand = new RelayCommand(Authentication, p => true);
         }
 
         #endregion
 
         #region Command Methods
 
-        private void authentication()
+        private void Authentication(object password)
         {
 
         }
