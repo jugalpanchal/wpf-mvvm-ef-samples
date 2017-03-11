@@ -13,7 +13,7 @@ namespace WPFMVVMEFPrototype.ViewModels
     {
         #region Protected Fields
 
-        protected NavigationService NavigationService { get; private set; }
+        protected INavigationService NavigationService { get; private set; }
 
         #endregion
 
@@ -25,7 +25,7 @@ namespace WPFMVVMEFPrototype.ViewModels
 
         #region Contructor
 
-        public ViewModel(NavigationService navigationService)
+        public ViewModel(INavigationService navigationService)
         {
             this.NavigationService = navigationService;
         }

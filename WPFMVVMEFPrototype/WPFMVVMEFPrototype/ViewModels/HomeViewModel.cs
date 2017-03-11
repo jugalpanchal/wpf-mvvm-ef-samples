@@ -9,7 +9,7 @@ namespace WPFMVVMEFPrototype.ViewModels
 {
     class HomeViewModel : ViewModel
     {
-        public HomeViewModel(NavigationService navigationService)
+        public HomeViewModel(INavigationService navigationService)
             : base(navigationService)
         {
         }

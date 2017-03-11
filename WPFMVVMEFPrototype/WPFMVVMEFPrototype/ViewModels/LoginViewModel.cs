@@ -38,7 +38,7 @@ namespace WPFMVVMEFPrototype.ViewModels
 
         private void Authentication(object password)
         {
-
+            this.NavigationService.Home(new HomeViewModel(this.NavigationService));
         }
 
         #endregion
