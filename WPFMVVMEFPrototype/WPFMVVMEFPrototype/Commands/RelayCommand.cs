@@ -15,7 +15,7 @@ namespace WPFMVVMEFPrototype.Commands
 
         #endregion
 
-        #region public Event
+        #region Public Event Handler
 
         public event EventHandler CanExecuteChanged;
 

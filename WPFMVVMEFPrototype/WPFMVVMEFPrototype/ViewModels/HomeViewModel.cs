@@ -9,9 +9,13 @@ namespace WPFMVVMEFPrototype.ViewModels
 {
     class HomeViewModel : ViewModel
     {
+        #region Constructor
+
         public HomeViewModel(INavigationService navigationService)
             : base(navigationService)
         {
         }
+
+        #endregion
     }
 }

@@ -10,6 +10,8 @@ namespace WPFMVVMEFPrototype.ServiceLocator
 {
     class NavigationService : INavigationService
     {
+        #region Public Methods
+
         public void Home(ViewModel viewModel)
         {
             var homeView = new HomeView()
@@ -18,5 +20,7 @@ namespace WPFMVVMEFPrototype.ServiceLocator
             };
             homeView.Show();
         }
+
+        #endregion
     }
 }
