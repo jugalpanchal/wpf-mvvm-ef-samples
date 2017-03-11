@@ -3,6 +3,20 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="HomeView" Height="300" Width="300">
     <Grid>
-        
+        <DockPanel>
+            <Menu DockPanel.Dock="Top">
+                <MenuItem Header="File">
+                    <MenuItem Header="New" />
+                    <MenuItem Header="Open" />
+                    <MenuItem Header="Save" />
+                    <Separator />
+                    <MenuItem Header="Exit" />
+                </MenuItem>
+                <MenuItem Header="Help">
+                    <MenuItem Header="Setting" />
+                    <MenuItem Header="About" />
+                </MenuItem>
+            </Menu>
+        </DockPanel>
     </Grid>
 </Window>
