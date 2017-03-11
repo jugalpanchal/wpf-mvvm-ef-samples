@@ -16,6 +16,8 @@ namespace WPFMVVMEFPrototype
     /// </summary>
     public partial class App : Application
     {
+        #region Overide Methods
+
         protected override void OnStartup(StartupEventArgs e)
         {
             base.OnStartup(e);
@@ -26,5 +28,7 @@ namespace WPFMVVMEFPrototype
             loginView.DataContext = new LoginViewModel(navigationService);
             loginView.Show();
         }
+
+        #endregion
     }
 }

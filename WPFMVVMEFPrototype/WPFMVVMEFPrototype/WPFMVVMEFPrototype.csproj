@@ -53,6 +53,8 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Commands\IRelayCommand.cs" />
+    <Compile Include="Commands\RelayCommand.cs" />
     <Compile Include="ServiceLocator\INavigationService.cs" />
     <Compile Include="ServiceLocator\NavigationService.cs" />
     <Compile Include="ViewModels\HomeViewModel.cs" />
