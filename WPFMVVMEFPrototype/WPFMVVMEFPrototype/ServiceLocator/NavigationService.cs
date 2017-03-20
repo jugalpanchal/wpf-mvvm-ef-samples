@@ -50,5 +50,17 @@ namespace WPFMVVMEFPrototype.ServiceLocator
         }
 
         #endregion
+
+
+        public void Setting(ViewModel viewModel)
+        {
+            var settingView = new SettingView()
+            {
+                WindowState = WindowState.Normal,
+                WindowStartupLocation = this.windowStartupLocation,
+                DataContext = viewModel
+            };
+            settingView.Show();
+        }
     }
 }

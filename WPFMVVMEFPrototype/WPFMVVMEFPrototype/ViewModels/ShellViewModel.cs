@@ -108,7 +108,7 @@ namespace WPFMVVMEFPrototype.ViewModels
 
         private void Setting(object obj)
         {
-            
+            this.NavigationService.Setting(new SettingViewModel(this.NavigationService));
         }
 
         private bool CanSetting()

@@ -19,7 +19,7 @@ namespace WPFMVVMEFPrototype
     {
         #region Privte Fields
         
-        private readonly WindowState windowState = WindowState.Normal;
+        private readonly WindowState windowState = WindowState.Maximized;
         private readonly WindowStartupLocation windowStartupLocation = WindowStartupLocation.CenterScreen;
 
         #endregion

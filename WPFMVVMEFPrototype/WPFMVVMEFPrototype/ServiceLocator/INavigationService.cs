@@ -10,5 +10,6 @@ namespace WPFMVVMEFPrototype.ServiceLocator
     interface INavigationService
     {
         void Shell(ViewModel viewModel);
+        void Setting(ViewModel viewModel);
     }
 }

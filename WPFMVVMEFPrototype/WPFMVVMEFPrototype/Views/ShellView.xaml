@@ -16,7 +16,7 @@
                     <MenuItem Header="Exit" />
                 </MenuItem>
                 <MenuItem Header="Help">
-                    <MenuItem Header="Setting" />
+                    <MenuItem Header="Setting" Command="{Binding SettingCommand}" />
                     <MenuItem Header="About" />
                 </MenuItem>
             </Menu>
