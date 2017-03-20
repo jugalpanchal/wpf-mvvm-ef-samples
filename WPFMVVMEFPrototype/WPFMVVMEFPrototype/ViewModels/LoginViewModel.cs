@@ -25,7 +25,7 @@ namespace WPFMVVMEFPrototype.ViewModels
 
         #region Constructor
 
-        public LoginViewModel(NavigationService navigationService)
+        public LoginViewModel(INavigationService navigationService)
             : base(navigationService)
         {
             this.LoginCommand = new RelayCommand(Authentication, p => true);
@@ -38,7 +38,7 @@ namespace WPFMVVMEFPrototype.ViewModels
         private void Authentication(object password)
         {
             SecureString SecurePassword = password as SecureString;
-            this.NavigationService.Home(new HomeViewModel(this.NavigationService));
+            this.NavigationService.Shell(new ShellViewModel(this.NavigationService));
         }
 
         #endregion

@@ -37,16 +37,16 @@ namespace WPFMVVMEFPrototype.ServiceLocator
 
         #region Public Methods
 
-        public void Home(ViewModel viewModel)
+        public void Shell(ViewModel viewModel)
         {
-            var homeView = new HomeView()
+            var shellView = new ShellView()
             {
                 WindowState = this.windowState,
                 WindowStartupLocation = this.windowStartupLocation,
                 DataContext = viewModel
             };
-            this.loginView.Close(); 
-            homeView.Show();
+            this.loginView.Close();
+            shellView.Show();
         }
 
         #endregion

@@ -1,7 +1,10 @@
-﻿<Window x:Class="WPFMVVMEFPrototype.Views.HomeView"
+﻿<Window x:Class="WPFMVVMEFPrototype.Views.ShellView"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="HomeView" Height="300" Width="300">
+        xmlns:viewmodels="clr-namespace:WPFMVVMEFPrototype.ViewModels"
+        xmlns:views="clr-namespace:WPFMVVMEFPrototype.Views"
+        Title="Shell" Height="300" Width="300">
+
     <Grid>
         <DockPanel>
             <Menu DockPanel.Dock="Top">

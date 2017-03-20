@@ -11,7 +11,7 @@ using WPFMVVMEFPrototype.ServiceLocator;
 
 namespace WPFMVVMEFPrototype.ViewModels
 {
-    class HomeViewModel : ViewModel
+    class ShellViewModel : ViewModel
     {
         #region Properties
 
@@ -31,7 +31,7 @@ namespace WPFMVVMEFPrototype.ViewModels
 
         #region Constructor
 
-        public HomeViewModel(INavigationService navigationService)
+        public ShellViewModel(INavigationService navigationService)
             : base(navigationService)
         {
             this.NewCommand = new RelayCommand(New, p => this.CanNew());
