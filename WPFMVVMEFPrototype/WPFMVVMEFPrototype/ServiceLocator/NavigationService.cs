@@ -21,11 +21,6 @@ namespace WPFMVVMEFPrototype.ServiceLocator
 
         #region Constructor
 
-        public NavigationService(Window loginView)
-        {
-            this.loginView = loginView;
-        }
-
         public NavigationService(WindowState windowState, WindowStartupLocation windowStartupLocation, LoginView loginView)
         {
             this.windowState = windowState;

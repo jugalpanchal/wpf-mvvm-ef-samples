@@ -9,7 +9,11 @@ namespace WPFMVVMEFPrototype.Models
 {
     class VariantModel : Model
     {
+        #region Properties
+
         public string Name { get; set; }
         public ObservableCollection<CarModel> Cars { get; set; }
+
+        #endregion
     }
 }

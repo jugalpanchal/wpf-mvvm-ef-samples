@@ -38,6 +38,8 @@ namespace WPFMVVMEFPrototype.ViewModels
         private void Authentication(object password)
         {
             SecureString SecurePassword = password as SecureString;
+            //Check if User Id and Password is valid or not.
+
             this.NavigationService.Shell(new ShellViewModel(this.NavigationService));
         }
 
