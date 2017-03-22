@@ -42,15 +42,16 @@ namespace WPFMVVMEFPrototype
             loginView.DataContext = loginViewModel;
 
 #if DEBUG
+            //Hardcoded User id and password for debug mode.
+
             loginViewModel.UserId = "Jugal";
-            
-            //Hardcoded password for debug mode.
+
             SecureString secureString = new SecureString();
-            secureString.AppendChar('j');
-            secureString.AppendChar('u');
-            secureString.AppendChar('g');
-            secureString.AppendChar('a');
             secureString.AppendChar('l');
+            secureString.AppendChar('a');
+            secureString.AppendChar('g');
+            secureString.AppendChar('u');
+            secureString.AppendChar('j');
 
             loginViewModel.LoginCommand.Execute(secureString);
 #else
