@@ -9,7 +9,7 @@ using WPFMVVMEFPrototype.ServiceLocator;
 
 namespace WPFMVVMEFPrototype.ViewModels
 {
-    abstract class ViewModel : INotifyPropertyChanged
+    public abstract class ViewModel : INotifyPropertyChanged
     {
         #region Protected Fields
 

@@ -11,7 +11,7 @@ using WPFMVVMEFPrototype.ServiceLocator;
 
 namespace WPFMVVMEFPrototype.ViewModels
 {
-    class ShellViewModel : ViewModel
+    public class ShellViewModel : ViewModel
     {
         #region Properties
 

@@ -7,7 +7,7 @@ using System.Windows.Input;
 
 namespace WPFMVVMEFPrototype.Commands
 {
-    interface IRelayCommand : ICommand
+    public interface IRelayCommand : ICommand
     {
         void NotifyCanExecuteChanged(EventArgs e);
     }

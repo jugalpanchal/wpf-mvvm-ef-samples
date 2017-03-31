@@ -7,7 +7,7 @@ using WPFMVVMEFPrototype.ServiceLocator;
 
 namespace WPFMVVMEFPrototype.ViewModels
 {
-    class CarViewModel : ViewModel
+    public class CarViewModel : ViewModel
     {
         #region Constructor
 

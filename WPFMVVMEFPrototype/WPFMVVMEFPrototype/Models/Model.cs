@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace WPFMVVMEFPrototype.Models
 {
-    class Model : INotifyPropertyChanged
+    public class Model : INotifyPropertyChanged
     {
         #region Public Event
         

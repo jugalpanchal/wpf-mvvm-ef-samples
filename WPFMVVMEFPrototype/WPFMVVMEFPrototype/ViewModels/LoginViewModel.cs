@@ -9,7 +9,7 @@ using WPFMVVMEFPrototype.ServiceLocator;
 
 namespace WPFMVVMEFPrototype.ViewModels
 {
-    class LoginViewModel : ViewModel
+    public class LoginViewModel : ViewModel
     {
         #region Properties
 

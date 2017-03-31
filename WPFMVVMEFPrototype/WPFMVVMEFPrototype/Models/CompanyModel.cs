@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace WPFMVVMEFPrototype.Models
 {
-    class CompanyModel : Model
+    public class CompanyModel : Model
     {
         #region Properties
 
