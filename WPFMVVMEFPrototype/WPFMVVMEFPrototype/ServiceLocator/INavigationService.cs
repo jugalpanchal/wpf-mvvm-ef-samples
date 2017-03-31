@@ -7,7 +7,7 @@ using WPFMVVMEFPrototype.ViewModels;
 
 namespace WPFMVVMEFPrototype.ServiceLocator
 {
-    interface INavigationService
+    public interface INavigationService
     {
         void Shell(ViewModel viewModel);
         void Setting(ViewModel viewModel);
